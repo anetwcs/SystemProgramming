@@ -1,0 +1,53 @@
+
+*************************
+* Exercise 8 Reflection *
+*************************
+Name: An Hong Nguyen  
+UW NETID: anetw
+STUDENT ID: 1976641
+
+-----------------------------------------------------------
+Question:
+For each of the following C++ containers, give an example
+scenario (i.e., what is being stored and why) where is would
+be most convenient to use that container. Briefly mention what
+feature(s) of that container make it suitable for that scenario.
+
+Hints:
+- Don't use examples lifted directly from the 333 exercises or
+  homework, though you may generate similar ones.
+- If you're not sure where to start, we recommend looking at
+  documentation for each container and looking at the "Element
+  access" and "Modifiers" methods to see what the differences
+  are in the container interfaces.
+
+Answers:
+1. std::vector
+-vector can be used to store a number of string vectors 
+that store an RSO's group members' names as the first item 
+in each vector and the remaining items are the books that 
+they recently read. (e.g. vector<vector<string>> 
+v{{"Kim", "book1", "book2"}, {"Matt", "book3", "book5"}} ) 
+-I chose this scenario because you can resize the vector since 
+RSO groups tend to add more members to the list but had a specific number 
+of recruited members to start. I can also
+get instant access to a member's name and the book that they read.
+
+2. std::list
+-list can be used to build a queue to store a list of people 
+waiting outside of a restaurant. Since pushing and popping the items 
+from the list is quick. We also rarely need to revisit past tokens
+which is efficient for list because traversing a list is time-consuming
+
+3. std::map
+- map can be used to build an AVLTree to store nodes that represent 
+customers and their reward points. the reward points can be used as 
+the 'priority values' for ordering. I chose this because it's ordered 
+so we can group the customers by their reward points efficiently. 
+We can also quickly find the top n of the member who earned the most rewards 
+and vice versa.
+
+4. std::unordered_map
+-unordered_map can be used for a location tracking app to store a mapping of  
+user's names as keys because they are unique and their <longtitudes, lattitudes> 
+of the places they visited as values. I chose this because keys are unique and unordered_map allows various data types for values. We can also get O(1) to the locations by knowing the username and this type of data doesn't need to be in order.
